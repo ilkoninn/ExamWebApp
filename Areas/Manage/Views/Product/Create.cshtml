@@ -1,0 +1,26 @@
+﻿@model CreateProductVM
+
+<div class="container mt-5">
+    <form class="row g-3" method="post" enctype="multipart/form-data">
+        <div class="col-md-6">
+            <label asp-for="Title" class="form-label">Title</label>
+            <input asp-for="Title" class="form-control" >
+            <span asp-validation-for="Title"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Description" class="form-label">Description</label>
+            <input asp-for="Description" class="form-control">
+            <span asp-validation-for="Description"></span>
+        </div>
+        <div class="col-md-6">
+            <label asp-for="Images" class="form-label">Product Images</label>
+            <input asp-for="Images" class="form-control">
+            <span asp-validation-for="Images"></span>
+        </div>
+        <div asp-validation-summary=All></div>
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <a asp-action="Table" asp-controller="Product" class="btn btn-danger">Cancel</a>
+        </div>
+    </form>
+</div>

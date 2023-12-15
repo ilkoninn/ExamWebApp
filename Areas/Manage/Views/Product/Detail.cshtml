@@ -1,0 +1,22 @@
+﻿@model Product
+
+<div class="container mt-5">
+
+    <h4>Product Title:</h4>
+    <h3 class="mb-4">@Model.Title</h3>
+    <h4>Product Description:</h4>
+    <h3 class ="mb-4">@Model.Description</h3>
+    <h4>Product Images: </h4>
+
+    <div class="row">
+        @foreach (var image in Model.Images)
+        {
+            <div class="col-6">
+                <img src="~/Upload/ProductImages/@image.ImgUrl" width="100px" />
+            </div>
+        }
+    </div>
+
+    <a asp-action="Table" asp-controller="Product" class="btn btn-primary mt-5">Go Back</a>
+
+</div>
